@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Hyperlink</title>
+    <!--link google fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather%7COpen+Sans">
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic"
+      rel="stylesheet"
+      type="text/css">
+    <!--link bootstrap5-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <!--link my css file-->
+    <link rel="stylesheet" href="styles.css">
+    <!--link javascript files-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="topbar">
+      <button onclick="navigateTo('home')">Home</button>
+      <button onclick="navigateTo('concept_mechanism')">
+        Concept & Mechanism
+      </button>
+      <button onclick="navigateTo('history')">History</button>
+      <button onclick="navigateTo('about_the_author')">About the author</button>
+    </nav>
+
+    <article id="home">
+      <h1 class="display-5">hi, Welcome to Amazing Hyperlink</h1>
+      <p class="home_p">Here you will explore the world of hyperlinks.</p>
+      <!--style of the paragraph in homepage should be different-->
+      <p class="home_p">
+        You will learn what they are, how they work, and how they developed. Are
+        you ready?
+      </p>
+      <button class="home_b" onclick="navigateTo('concept_mechanism')">
+        Let's go!
+      </button>
+    </article>
+
+    <div class="w-container">
+      <!--design wrapper to wrap the content-->
+      <div class="article-body-wrapper">
+        <div class="body-copy w-richtext">
+          <article id="concept_mechanism">
+            <h1 style="padding-top: 10px">What is Hyperlink?</h1>
+            <p>
+              In this section I will explain hyperlinks' definition and their
+              types.
+            </p>
+            <h2>Definition</h2>
+            <p>
+              In computing, a hyperlink, or simply a link, is a digital
+              reference to data that the user can follow or be guided to by
+              clicking or tapping.
+              <a href="https://en.wikipedia.org/wiki/Hyperlink#:~:text=In%20computing%2C%20a%20hyperlink%2C%20or,is%20known%20as%20anchor%20text."
+                >[1]</a>
+              A hyperlink points to a whole document or to a specific element
+              within a document. A user can easily follow, jump to, and be
+              directed to the destination by either clicking, tapping on, or
+              hovering over the link.
+            </p>
+            <p>
+              A hyperlink can be a piece of text, an image, an icon, or a
+              graphic that, when you click on it, points to and navigates you to
+              a different webpage or document. It can also point to a specific
+              section or element within the same webpage or document. The linked
+              text is known as “anchor text“.
+            </p>
+            <p>
+              Basically, hyperlinks are clickable pointers to a resource.<a href="https://www.freecodecamp.org/news/what-is-a-hyperlink-definition-for-html-link-beginners/">[2]</a>
+              For instance, hyperlink is a hyperlink, which will direct you to
+              the Wikipedia of “hyperlink”. And the document who contains
+              hyperlinks is source document, while the hyperlink leads you to
+              target document.
+            </p>
+            <h2>Types of hyperlinks</h2>
+            <h3 class="bullet-heading">Internal Hyperlinks</h3>
+            <p>
+              An internal hyperlink links two pages inside the same website. For
+              example, <a href="#history">history of hyperlink</a> is an
+              internal hyperlink which leads you to the next page of this
+              website.
+            </p>
+            <h3 class="bullet-heading">External Hyperlink</h3>
+            <p>
+              An external hyperlink links one website to another website. For
+              example,
+              <a href="https://www.w3schools.com/html/html_links.asp"
+                >HTML Links</a
+              >
+              is an external hyperlink which leads you from this website to
+              w3school website.
+            </p>
+            <p>
+              Besides internal hyperlink and external hyperlink, you can
+              categorize hyperlinks by their forms
+            </p>
+            <h3 class="bullet-heading">Text Hyperlink</h3>
+            <p>
+              The hyperlink is embedded into a word or phrase which makes it
+              clickable. The examples above are text links.
+            </p>
+            <h3 class="bullet-heading">Image Hyperlink</h3>
+            <p>
+              The hyperlink is embedded into a image which makes it clickable.
+              For instance, click this picture of Vision Pro, you will be led to
+              a txt file introducing Vision Pro which is copied from Wikipedia.
+            </p>
+            <div class="image-container">
+              <a href="./documents/Apple_Vision_Pro_Wikipedia.txt"
+                ><img
+                  src="./images/Vision-pro.jpeg"
+                  alt="the image link of Apple Vision Pro"></a
+              ><span class="reference"
+                ><a
+                  href="https://www.wired.com/story/apple-vision-pro-specs-price-release-date/"
+                  >[3]</a
+                ></span
+              >
+            </div>
+            <h3 class="bullet-heading">Anchor Hyperlink</h3>
+            <p>
+              Anchor hyperlinks bring user from one place in a website to
+              another place, just like the example shown in “internal link”.
+            </p>
+            <h3 class="bullet-heading">Fat Hyperlink</h3>
+            <p>A fat hyperlink leads to multiple destinations.</p>
+            <h1>How do hyperlinks work?</h1>
+            <p>
+              In this section I will explain how are hyperlinks implemented in
+              web developers' perspectives and browsers perspectives.
+            </p>
+            <h2>How do developers create an HTML hyperlink?</h2>
+            <h3>Example 1: Text link</h3>
+            <p>This is a basic syntax of HTML link.</p>
+            <img
+              id="basic-syntax"
+              src="./images/example1-1.png"
+              alt="a basic syntax of HTML link"
+            >
+            <p>
+              The <code>a</code> defines a hyperlink, <code>href</code> stands
+              for hypertext reference, followed by “./images/iPhone 15.jpg” ,
+              which is the location of the target document, “iPhone 15” is the
+              hypertext.
+            </p>
+            <p>
+              Usually the hypertext is inside a paragraph, so you should put the
+              <code>a</code> element inside a paragraph like this.
+            </p>
+            <img src="./images/example1-2.png" alt="link inside a paragraph">
+            <p>This is a demo of how it works.</p>
+            <video controls>
+              <source src="./videos/example1.mp4" type="video/mp4">
+            </video>
+            <!--insert video.-->
+            <h3>Example 2: Image link</h3>
+            <p>
+              To create an image link, you should add the image inside anchor
+              element
+            </p>
+            <img src="./images/example2.png" alt="demo code of a image link">
+            <p>
+              In this case, click the image and then you will get the
+              iPhone15.doc document.
+            </p>
+            <video controls>
+              <source src="./videos/example2.mp4" type="video/mp4">
+            </video>
+            <h3>Example 3: target attribute</h3>
+            <p>
+              In the examples above, when you click the link, the browser will
+              open the same tab. That's browser's default way to open a link.
+              What should you do if you want to make the link opened in a new
+              tab? You need to specify the <code>target</code> attribute.
+              <code>target</code> has 4 values:
+            </p>
+            <ul>
+              <li>
+                <b>_self:</b> This is default one. When you click the link, the
+                link will be opened in the same tab.
+              </li>
+              <li>
+                <b>_blank:</b> When you click the link, the link will be opened
+                in a new tab.
+              </li>
+            </ul>
+            <img
+              src="./images/example3.png"
+              alt="demo code of _blank value of target"
+            >
+            <video controls>
+              <source src="./videos/example3.mp4" type="video/mp4">
+            </video>
+            <ul>
+              <li>
+                <b>_top:</b> Opens the document in the full body of the window
+              </li>
+              <li><b>_parent:</b> Opens the document in the parent frame</li>
+            </ul>
+            <h2>How are HTML links implemented in browsers?</h2>
+            <p>
+              To explain how hyperlinks are implemented in browsers, I will
+              break it down into step-by-step progress.
+            </p>
+            <h3>Step 1: Parsing the anchor tag</h3>
+            <p>
+              When you click the link, the browser encounters the anchor tag
+              with the <i>href</i> attribute and parse it.
+            </p>
+            <p>
+              Then there are two different conditions. If the link refers to a
+              local file, it does not need to send an HTML request. For example,
+            </p>
+            <img
+              src="./images/example1-1.png"
+              alt="demo code of a basic HTML link"
+            >
+            <p>
+              In this case, the browser constructs the local file path based on
+              the specified path(./images/iPhone 15.jpg) in the
+              <i>href</i> attribute, and then access it through user's local
+              filesystem, and then render it.
+            </p>
+            <p class="text-primary">
+              However, if the link refers to a document on Internet, it needs to
+              send an HTML request and the steps are as follows:
+            </p>
+            <img
+              src="./images/overview-HTML-link.png"
+              alt="HTML implementation overview"
+            >
+            <p>
+              The step 2-6 shown on the overview picture will be described in
+              more details later. Before we started, we should have some
+              prerequisite knowledge about the html link. Take the webpage
+              w3schools HTML introduction
+            </p>
+            <img
+              src="./images/link-example.png"
+              alt="w3schools url as example"
+            >
+            <p>
+              as example. We can break the link down into several components:
+            </p>
+            <ul>
+              <li>(1) Protocol: <b>https://</b></li>
+              <li>
+                <p>
+                  The protocol indicates the method used for accessing the
+                  resource on the web. In this case, it's HTTPS (Hypertext
+                  Transfer Protocol Secure), which is the secure version of
+                  HTTP. HTTPS encrypts the data exchanged between the user's
+                  browser and the website, providing a secure connection.
+                </p>
+              </li>
+              <li>(2) Domain/Subdomain: <b>www.w3schools.com</b></li>
+              <li>
+                <p>
+                  This part of the URL identifies the domain name of the
+                  website. In this case, it's <i>w3schools.com</i>. The
+                  <i>.com</i> is TLD ( top-level domain) refers to commercial
+                  organizations.
+                </p>
+              </li>
+              <li>(3) Path: <b>/html/html_intro.asp</b></li>
+              <li>
+                <p>
+                  The path specifies the location of the specific resource (in
+                  this case, a web page) on the server's filesystem. In this
+                  URL, the path is <i>/html/html_intro.asp</i>. It indicates
+                  that the server should look for a file named "html_intro.asp"
+                  within a directory named html.
+                </p>
+              </li>
+            </ul>
+            <h3>Step 2: Browser looks up IP address for the domain</h3>
+            <p>
+              After you clicked the html link, the browser needs to look for
+              which server on the internet to connect to. To achieve this, it
+              needs to look up the IP address of the server hosting the website
+              using the domain you typed in. It does this using a DNS lookup<a
+                href="https://aws.amazon.com/blogs/mobile/what-happens-when-you-type-a-url-into-your-browser/"
+                >[4]</a
+              >. The DNS look up is like looking up phone number in your contact
+              app, the IP address is the phone number, the domain name is the
+              contact's name, and the DNS (domain name system) is the contact
+              app which records the contacts' names and their numbers.
+            </p>
+            <p>
+              To reduce latency, the browser will check cache(memory) first. If
+              the browser can't find IP address on cache, then DNS lookup
+              begins. The steps are shown in the picture below.
+            </p>
+            <img
+              src="./images/DNS_lookup.png"
+              alt="a demonstration of DNS lookup"
+            >
+            <h3>Step 3: Browser initiates TCP connection with the server</h3>
+            <p>
+              After the browser get the IP address of the server, it starts to
+              establish TCP connection as shown below.
+            </p>
+            <div class="image-container">
+              <img src="./images/handshake.png" alt="handshake of TCP"><span
+                class="reference"
+                ><a
+                  href="https://www.coengoedegebure.com/tcp-3-way-handshake-port-scanning/"
+                  >[5]</a
+                ></span
+              >
+            </div>
+            <!--add a div to add the index near the image-->
+            <h3>Step 4: Browser sends the HTTP request to the server.</h3>
+            <div class="image-container">
+              <img src="./images/http-requests.webp" alt="HTTP request"><span
+                class="reference"
+                ><a href="https://www.jcchouinard.com/http-requests/"
+                  >[6]</a
+                ></span
+              >
+            </div>
+            <p>
+              Once the TCP connection is established, the browser has connected
+              to the server, and it follows the rules of communication for
+              HTTP(s) protocol. It begins with the browser sending an HTTP
+              request to the server to request the contents of the page. The
+              HTTP request contains 3 components: request line, headers and body
+            </p>
+            <h4>Request Line</h4>
+            <img
+              src="./images/request_line.png"
+              alt="an example of HTTP request line"
+            >
+            <p>
+              The request line specifies the http method (get in the example),
+              path to the requested resource(URL). There are several types of
+              method as the table shown below.
+            </p>
+            <table class="table table-hover">
+              <tr>
+                <th>HTML request methods</th>
+                <th>Descriptions</th>
+              </tr>
+              <tr>
+                <td>GET</td>
+                <td>
+                  Requests a representation of the specified resource. GET
+                  requests should only retrieve data and not modify anything on
+                  the server.
+                </td>
+              </tr>
+              <tr>
+                <td>POST</td>
+                <td>
+                  Submits data to be processed by the server. It's often used
+                  for form submissions and can modify data on the server.
+                </td>
+              </tr>
+              <tr>
+                <td>PUT</td>
+                <td>
+                  Updates a resource on the server with the provided data.
+                </td>
+              </tr>
+              <tr>
+                <td>DELETE</td>
+                <td>Deletes the specified resource on the server.</td>
+              </tr>
+              <tr>
+                <td>HEAD</td>
+                <td>
+                  Similar to GET but only requests the headers of the response,
+                  not the body.
+                </td>
+              </tr>
+              <tr>
+                <td>OPTIONS</td>
+                <td>
+                  Retrieves the communication options available for the target
+                  resource.
+                </td>
+              </tr>
+              <tr>
+                <td>PATCH</td>
+                <td>Applies partial modifications to a resource.</td>
+              </tr>
+            </table>
+            <!--bootstrap5 style-->
+            <h4 style="padding-top: 10px">Request Headers</h4>
+            <p>
+              The headers pass extra information along from the client that help
+              route the request, indicate what type of client is making the
+              request (the user agent), path, accept-encoding (supported
+              encoding methods), cookies, etc.
+            </p>
+
+            <img
+              src="./images/headers1.png"
+              alt="an example of request headers">
+            <img
+              src="./images/headers2.png"
+              alt="an example of request headers">
+            <h4>Request Body</h4>
+            <p>
+              The request body is usually empty for a GET request like the
+              example. For a request that handles resources, like POST, PUT or
+              PATCH, the body will contain the data from the client to create or
+              update.
+            </p>
+            <h4>XMLHttpRequest</h4>
+            <p>
+              Nowadays, modern browsers use XMLHttpRequest to interact with
+              servers. You can retrieve data from a URL without having to do a
+              full page refresh. This enables a Web page to update just part of
+              a page without disrupting what the user is doing. It allows client
+              to script data transfers via JavaScript. Here are some examples
+              for you.
+            </p>
+            <h5 class="bullet-heading"><b>GET request</b></h5>
+            <img src="./images/GET.png" alt="an example of GET">
+            <p>
+              <code>GET </code> is an method used to retrieve data from a
+              server. The first line requests data from the w3schools link. The
+              third parameter to<code> open</code>is whether the request should
+              be asynchronous. <code>true</code> means JavaScript code will
+              continue to execute while waiting for the server's response. This
+              is generally preferred to avoid blocking the browser's UI.
+            </p>
+            <p>
+              <code>send()</code> is the method sends the related request to
+              server.
+            </p>
+            <h5 class="bullet-heading"><b>POST request</b></h5>
+            <p>A POST request is used to create or alter data on the server.</p>
+            <img src="./images/POST.png" alt="an example of POST">
+            <p>
+              In this example, <code>POST</code> request sends the data
+              <code>"name=Thomas&age=31"</code> to the server.
+            </p>
+            <h5 class="bullet-heading"><b>PUT request</b></h5>
+            <p>
+              A PUT request is used to replace data on the server. It must be
+              idempotent, which means if you send the same PUT or DELETE request
+              multiple times, the result should be the same as sending it once.
+            </p>
+            <h3>
+              Step 5: Server processes HTTP request and sends back a response
+            </h3>
+            <p>
+              After the server receives and processes the request, it sends back
+              an HTTP response with
+            </p>
+            <ul>
+              <li>
+                <p>
+                  A status line, telling the browser the status of the request
+                </p>
+              </li>
+              <li>
+                <p>
+                  Response headers, telling the browser how to handle the
+                  response
+                </p>
+              </li>
+              <li>
+                <p>
+                  The requested resource at that path, either content like HTML,
+                  CSS, Javascript, or image files, or data.
+                </p>
+              </li>
+            </ul>
+            <p>
+              An example response(from the example w3schools webpage above) like
+              this
+            </p>
+            <img src="./images/response.png" alt="an example response">
+            <h4 style="margin-top: 20px; margin-bottom: 20px">AJAX</h4>
+            <p>
+              Ajax is short for "Asynchronous JavaScript and XML" is a set of
+              web development techniques that uses various web technologies on
+              the client-side to create asynchronous web applications. With
+              Ajax, web applications can send and retrieve data from a server
+              asynchronously (in the background) without interfering with the
+              display and behaviour of the existing page.<a
+                href="https://en.wikipedia.org/wiki/Ajax_(programming)"
+                >[7]</a
+              >
+            </p>
+            <p>
+              AJAX communicates with the server using XMLHttpRequest object.
+              Let's try to understand the flow of ajax or how ajax works by the
+              image displayed below.
+            </p>
+            <img src="./images/howajaxworks.png" alt="an demonstration of AJAX">
+            <p>
+              As you can see in the above example, XMLHttpRequest object plays a
+              important role.
+            </p>
+            <ol>
+              <li>
+                <p>
+                  User sends a request from the UI and a javascript call goes to
+                  XMLHttpRequest object.
+                </p>
+              </li>
+              <li>
+                <p>
+                  HTTP Request is sent to the server by XMLHttpRequest object.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Server interacts with the database using JSP, PHP, Servlet,
+                  ASP.net etc.
+                </p>
+              </li>
+              <li><p>Data is retrieved.</p></li>
+              <li>
+                <p>
+                  Server sends XML data or JSON data to the XMLHttpRequest
+                  callback function.
+                </p>
+              </li>
+              <li>
+                <p>
+                  HTML and CSS data is displayed on the browser.<a
+                    href="https://www.javatpoint.com/how-ajax-works"
+                    >[8]</a
+                  >
+                </p>
+              </li>
+            </ol>
+            <h4 style="margin-top: 20px; margin-bottom: 20px">
+              Example of AJAX: Random Dog Picture
+            </h4>
+            <p>
+              This is an example of AJAX. It makes a call to a public API, get
+              data (JSON data in this example) from server and display without
+              reloading the page.
+            </p>
+            <p>
+              Click the button, and you can see a cute puppy! (thanks🥰,
+              <a href="https://dog.ceo/dog-api/">Dog API</a>)
+            </p>
+            <button id="getCuteDogs" class="btn btn-primary mt-3">
+              Get a random dog picture
+            </button>
+            <div class="dog-image"></div>
+
+            <h3>Step 6: Browser renders the content of the response</h3>
+            <div class="image-container">
+              <img
+                src="./images/render.png"
+                alt="the steps of browser rendering"
+              ><span class="reference"
+                ><a href="https://web.dev/articles/howbrowserswork"
+                  >[9]</a
+                ></span
+              >
+            </div>
+            <p>
+              After receiving the response from servers, the browser starts to
+              render it
+            </p>
+            <ul>
+              <li>
+                <p>1. Parse the HTML</p>
+                <p>
+                  When the browser receives the HTML document, it starts parsing
+                  the HTML to DOM(Document Object Model), which represents the
+                  structure of the webpage.
+                </p>
+              </li>
+              <li>
+                <p>2. Parse the CSS to construct CSSOM(CSS Object Model)</p>
+                <p>
+                  The browser simultaneously parses the linked CSS files and
+                  constructs the CSSOM, which represents the styles applied to
+                  the webpage.
+                </p>
+              </li>
+              <li>
+                <div class="image-container">
+                  <img
+                    src="./images/step-3-1000.jpeg"
+                    alt="parse CSS and build CSSOM"
+                  >
+                  <span class="reference"
+                    ><a
+                      href="https://dev.to/starkiedev/how-the-browser-renders-a-web-page-1ahc"
+                      >[10]</a
+                    ></span
+                  >
+                  <!--div must inside list-->
+                </div>
+              </li>
+              <li>
+                <p>3. Create Render Tree</p>
+                <p>
+                  Once both the DOM and CSSOM are constructed, the browser
+                  combines them to create the render tree.
+                </p>
+              </li>
+              <li>
+                <p>4. Calculate layout and paint</p>
+                <p>
+                  Upon completed render tree, the browser knows what to render.
+                  And then it calculates the layout, knowing where to render.
+                  Finally, take the layout information and paint the pixels to
+                  the screen.<a
+                    href="https://dev.to/starkiedev/how-the-browser-renders-a-web-page-1ahc"
+                    >[11]</a
+                  >
+                </p>
+              </li>
+            </ul>
+            <p style="padding-top: 15px">
+              Got a clue about how browser works with html link? You can try a
+              quiz to test your learning!
+            </p>
+            <div class="container">
+              <div class="quiz-question" id="question1">
+                <h3>
+                  Q1. What will the browser do before it sends an HTML to the
+                  server and after it gets the response from the server?
+                </h3>
+                <form>
+                  <!--A form to collect answers-->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer1"
+                      id="question1_optionA"
+                      value="A"
+                    >
+                    <label class="form-check-label" for="question1_optionA"
+                      >A. Parse the anchor tag; looking for the IP
+                      address</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer1"
+                      id="question1_optionB"
+                      value="B"
+                    >
+                    <label class="form-check-label" for="question1_optionB"
+                      >B. Establish TCP connection with the server; render the
+                      webpage</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer1"
+                      id="question1_optionC"
+                      value="C"
+                    >
+                    <label class="form-check-label" for="question1_optionC"
+                      >C. Looking for the IP address; establish TCP connection
+                      with the server</label
+                    >
+                  </div>
+                </form>
+                <button
+                  type="button"
+                  class="btn btn-primary mt-3"
+                  onclick="checkAnswer('question1')"
+                >
+                  Submit
+                </button>
+                <p id="result_question1" class="mt-3"></p>
+              </div>
+
+              <div class="quiz-question" id="question2">
+                <h3>Q2. This is a request line. What does this request do?</h3>
+                <img
+                  src="./images/headers3.png"
+                  alt="a request line picture for question 2"
+                >
+                <form>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer2"
+                      id="question2_optionA"
+                      value="A"
+                    >
+                    <label class="form-check-label" for="question2_optionA"
+                      >A. Requests a representation of the specified
+                      resource</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer2"
+                      id="question2_optionB"
+                      value="B"
+                    >
+                    <label class="form-check-label" for="question2_optionB"
+                      >B. Updates a resource on the server with the provided
+                      data.</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer2"
+                      id="question2_optionC"
+                      value="C"
+                    >
+                    <label class="form-check-label" for="question2_optionC"
+                      >C. Submits data to be processed by the server.</label
+                    >
+                  </div>
+                </form>
+                <button
+                  type="button"
+                  class="btn btn-primary mt-3"
+                  onclick="checkAnswer('question2')"
+                >
+                  Submit
+                </button>
+                <p id="result_question2" class="mt-3"></p>
+              </div>
+              <div class="quiz-question" id="question3">
+                <h3>
+                  Q3. After the server processes this request, what will it send
+                  to the browser?
+                </h3>
+                <img
+                  src="./images/question3.png"
+                  alt="a request line for question3"
+                >
+                <form>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer3"
+                      id="question3_optionA"
+                      value="A"
+                    >
+                    <label class="form-check-label" for="question3_optionA"
+                      >A. Main.js</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer3"
+                      id="question3_optionB"
+                      value="B"
+                    >
+                    <label class="form-check-label" for="question3_optionB"
+                      >B. Lib folder</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="answer3"
+                      id="question3_optionC"
+                      value="C"
+                    >
+                    <label class="form-check-label" for="question3_optionC"
+                      >C. Pathfinder folder</label
+                    >
+                  </div>
+                </form>
+                <button
+                  type="button"
+                  class="btn btn-primary mt-3"
+                  onclick="checkAnswer('question3')"
+                >
+                  Submit
+                </button>
+                <p id="result_question3" class="mt-3"></p>
+              </div>
+            </div>
+          </article>
+          <!--div should nested in article-->
+          <article id="history">
+            <h1>A Brief History of Hyperlink</h1>
+            <p>
+              This is a timeline about how hyperlink evolves, including some
+              milestones, key technologies and evolving use.
+            </p>
+            <div id="timeline">
+              <article>
+              <!--a section about timeline-->
+              <!--I used a template from https://www.sliderrevolution.com/resources/css-timeline/-->
+              <!--I modified the style of nodes and add images below the paragraph and add more elements-->
+                <div class="inner">
+                  <!--each part of a timeline is an article-->
+                  <span class="date">
+                    <!--the dot, but shown date isn't necessary in this case-->
+                  </span>
+                  <div class="image-container">
+                    <h2>Early concept of hyperlink (1960s-1980s)</h2>
+                    <p>
+                      The term 'hypertext' (which gave birth to the term
+                      'hyperlink') was originally coined by the pre-internet
+                      pioneer Ted Nelson in 1963.
+                      <a href="http://www.ted-hunt.com/HYPERLINKS/index.html"
+                        >[12]</a
+                      >
+                      He defined a hyperlink as a selectable reference to
+                      another piece of information. His vision of a computer
+                      network where documents could be interconnected gave birth
+                      to a prototype known as Project Xanadu.<a
+                        href="https://link-building-services.co.uk/the-evolution-of-hyperlinks-a-journey-through-the-digital-age/"
+                        >[13]</a
+                      >
+                    </p>
+                    <img
+                      class="img-timeline"
+                      src="./images/Ted_Nelson_cropped.jpg"
+                      alt="Ted Nelson"
+                    ><span class="reference"
+                      ><a
+                        href="https://en.wikipedia.org/wiki/History_of_hypertext"
+                        >[14]</a></span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <div class="image-container">
+                    <h2>Invention of HTML (1990)</h2>
+                    <p>
+                      Though the concept of hyperlink conceived in 1960s, it is
+                      only used within some researchers, until the invention of
+                      World Wide Web make it become tangible. In 1989, a British
+                      scientist Tim Berners-Lee invented World Wide Web which
+                      includes the building block HTML (Hypertext markup
+                      language). HTML is a text format to represent hypertext
+                      documents. It create standards for creating and linking
+                      documents on World Wide Web. And the
+                      <code>a</code> element (I think you have been familiar
+                      with it) is introduced in HTML 2.0, which allows
+                      developers to add hyperlinks between webpages.
+                    </p>
+                    <img
+                      class="img-timeline"
+                      src="./images/Tim-Berners-Lee.jpg"
+                      alt="Tim Berners-Lee"> <span class="reference"
+                      ><a href="https://home.cern/science/computing/birth-web/short-history-web">[15]</a>
+                    </span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <div class="image-container">
+                    <h2>
+                      NCSA Mosaic embedded hyperlink within a webpage(1993)
+                    </h2>
+                    <p>
+                      After the invention of WWW, the importance of hyperlinks
+                      became apparent. The NCSA Mosaic, one of the first
+                      graphical web browsers released in 1993, set a precedent
+                      for embedding hyperlinks within a webpage, which made
+                      hyperlinks accessible to a boarder users.
+                    </p>
+                    <img
+                      class="img-timeline"
+                      src="./images/mosaic.webp"
+                      alt="mosaic"><span class="reference"><a
+                        href="https://www.foxnews.com/tech/ncsa-mosaic-the-first-real-web-browser-turns-20">[16]</a></span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <div class="image-container">
+                    <h2>URI (1994)</h2>
+                    <p>
+                      In June 1994, the IETF published Berners-Lee's first
+                      Request for Comments that acknowledged the existence of
+                      URLs and URNs. URI (Uniform Resource Identifier) provides
+                      a means of locating and retrieving information resources
+                      on a network.
+                      <a
+                        href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier"
+                        >[17]</a
+                      >
+                      Particularly, URL gives a standard way of hyperlinks to
+                      locate a given unique resource on the Internet.
+                    </p>
+                    <img
+                      class="img-timeline"
+                      src="./images/uri.webp"
+                      alt="URI"><span class="reference"><a href="https://www.businessinsider.com/guides/tech/what-is-a-url">[18]</a></span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <div class="image-container">
+                    <h2>CSS (1994)</h2>
+                    <p>
+                      Cascading Style Sheets(CSS), first proposed by Håkon Wium
+                      Lie on 10 October 1994. It is a markup language which
+                      enables us to style a webpage.
+                    </p>
+                    <img
+                      class="img-timeline"
+                      src="./images/sta-je-css.png"
+                      alt="CSS"><span class="reference"><a href="https://en.wikipedia.org/wiki/CSS#History">[19]</a></span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <h2>JavaScript (1997)</h2>
+                  <p>
+                    In November 1996, Netscape submitted JavaScript to Ecma
+                    International, as the starting point for a standard
+                    specification that all browser vendors could conform to.
+                    This led to the official release of the first ECMAScript
+                    language specification in June 1997.<a
+                      href="https://en.wikipedia.org/wiki/JavaScript#History"
+                      >[20]</a
+                    >
+                    It's a scripting language that enables you to create
+                    dynamically updating content, control multimedia, animate
+                    images, and pretty much everything else.<a
+                      href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+                      >[21]</a
+                    >
+                  </p>
+                  <img
+                    class="img-timeline"
+                    src="./images/javascript.png"
+                    alt="JavaScript">
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <div class="image-container">
+                    <h2>Dynamic Web Page and databases (2000s)</h2>
+                    <p>
+                      Different from static webpage, dynamic webpage displays
+                      different content for different users while retaining the
+                      same layout and design. They 're frequently implemented to
+                      show information that changes frequently, e.g., weather
+                      updates or stock prices. Technologies like server-side
+                      scripting languages(e.g ASP, ASP.NET), client-side
+                      scripting languages like JavaScript and databases make it
+                      happen.
+                    </p>
+                    <img
+                      class="img-timeline"
+                      src="./images/dynamic.jpeg"
+                      alt="dynamic page"><span class="reference"><a href="https://www.mytaskpanel.com/static-and-dynamic-websites/">[22]</a></span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <div class="image-container">
+                    <h2>Media and Multimedia Hyperlinks</h2>
+                    <p>
+                      As the web technologies evolved, hyperlinks can not only
+                      embedded to text, but also to multimedia elements like
+                      images, videos, interactive applications and so on.
+                    </p>
+                    <img
+                      class="img-timeline"
+                      src="./images/multimedia.jpeg"
+                      alt="multimedia"><span class="reference"><a href="https://www.linkedin.com/pulse/multimedia-its-applications-muhammad-ikhmal/">[23]</a></span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <div class="image-container">
+                    <h2>Responsive design</h2>
+                    <p>
+                      As the development of mobile devices, hyperlink needs to
+                      evolve its adaptability on mobile devices, such as
+                      adapting to different screen sizes. Also, the ability to
+                      work on different platforms seamlessly has also become
+                      important. Responsive web design will automatically adjust
+                      for different screen sizes and viewports.
+                    </p>
+                    <img class="img-timeline"
+                      src="./images/img_temp_band.jpg"
+                      alt="responsive design"><span class="reference"><a href="https://www.w3schools.com/html/html_responsive.asp">[24]</a></span>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <div class="inner">
+                  <span class="date"> </span>
+                  <h2>Next...</h2>
+                  <p></p>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <article id="about_the_author">
+            <h1>About the author</h1>
+            <div class="sidebar-wrapper">
+              <!--used a template of https://themes.3rdwavemedia.com/bootstrap-templates/resume/orbit-free-resume-cv-bootstrap-theme-for-developers/-->
+              <!--I modified the content, the style to make it adaptive to my webpage-->
+              <div class="profile-container">
+                <img class="rounded-circle mx-auto d-block"
+                  width=170
+                  src="./images/profile.jpg"
+                  alt="profile">
+                <!--using bootstrap5 to set the image rounded-->
+                <h1 class="name">Yi Ren</h1>
+                <h3 class="tagline">UWA IT Student</h3>
+              </div>
+              <!--//profile-container-->
+
+              <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                  <li class="email">
+                    <i class="fa-solid fa-envelope"></i
+                    ><a href="mailto:yourname@email.com"
+                      >23895642@student.uwa.edu.au</a
+                    >
+                  </li>
+                  <li class="phone">
+                    <i class="fa-solid fa-phone"></i
+                    ><a href="tel:0466779011">0466779011</a>
+                  </li>
+                </ul>
+              </div>
+              <!--//contact-container-->
+              <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                <div class="item">
+                  <h4 class="degree">Master of IT</h4>
+                  <h5 class="meta">University of Western Australia</h5>
+                  <div class="time">2023 -</div>
+                </div>
+                <!--//item-->
+                <div class="item">
+                  <h4 class="degree">Bachelor of Economics</h4>
+                  <h5 class="meta">JiangSu University</h5>
+                  <div class="time">2019 - 2023</div>
+                </div>
+                <!--//item-->
+              </div>
+              <!--//education-container-->
+              <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                  <li>Chinese <span class="lang-desc">(Native)</span></li>
+                  <li>English <span class="lang-desc">(C1)</span></li>
+                </ul>
+              </div>
+              <!--//language-container-->
+
+              <div class="interests-container container-block">
+                <h2 class="container-block-title">Interests</h2>
+                <ul class="list-unstyled interests-list">
+                  <li>Reading</li>
+                  <li>Watching Movies</li>
+                  <li>Cooking</li>
+                  <li>Cycling</li>
+                </ul>
+              </div>
+              <!--//interests-->
+            </div>
+            <!--//sidebar-wrapper-->
+
+            <div class="main-wrapper">
+              <section class="section summary-section">
+                <h2 class="section-title">
+                  <span class="icon-holder"
+                    ><i class="fa-solid fa-user"></i></span
+                  >Career Profile
+                </h2>
+                <div class="summary">
+                  <p>
+                    I'm Yi Ren,23, from China. I have a bachelor's degree of
+                    economics and last year I came to UWA to pursue master's
+                    degree of IT. I did an economics research in my
+                    undergraduate study, had two internships in China and did a
+                    data analysis project using R during UWA study. My
+                    interested job is data analyst.
+                  </p>
+                </div>
+              </section>
+              <!--//section-->
+
+              <section class="section experiences-section">
+                <h2 class="section-title">
+                  <span class="icon-holder"
+                    ><i class="fa-solid fa-briefcase"></i></span
+                  >Internship Experiences
+                </h2>
+
+                <div class="item">
+                  <div class="meta">
+                    <div class="upper-row">
+                      <h3 class="job-title">
+                        Bank Customer Service (June 2022 - July 2022)
+                      </h3>
+                    </div>
+                    <div class="company">ICBC, Jiangsu, China</div>
+                  </div>
+                  <div class="details">
+                    <p>
+                      Mainly in charge of digital banking services, educate
+                      customers on digital banking tools and platforms, guiding
+                      them through the setup and troubleshooting process to
+                      enhance their online banking experience.
+                    </p>
+                    <p>
+                      Manage a high volume of inbound calls and emails, ensuring
+                      timely and accurate responses to customer queries and
+                      concerns.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="meta">
+                    <div class="upper-row">
+                      <h3 class="job-title">
+                        Foreign Trade Operator (Feb 2023-Apr 2023)
+                      </h3>
+                    </div>
+                    <div class="company">
+                      Shiruo E-commerce company, Zhejiang, China
+                    </div>
+                  </div>
+                  <!--//meta-->
+                  <div class="details">
+                    <p>
+                      Communicate effectively with international customers and
+                      suppliers to negotiate terms, resolve disputes, and
+                      address any concerns related to orders, shipments, or
+                      deliveries.
+                    </p>
+                    <p>
+                      Prepare and review shipping documents such as invoices,
+                      packing lists, bills of lading, and certificates of origin
+                      to ensure accuracy and adherence to regulatory
+                      requirements.
+                    </p>
+                    <p>
+                      Maintain accurate records of transactions, documentation,
+                      and correspondence related to foreign trade activities,
+                      ensuring documentation is organized and accessible for
+                      audit purposes.
+                    </p>
+                  </div>
+                  <!--//details-->
+                </div>
+                <!--//item-->
+              </section>
+              <section class="section projects-section">
+                <h2 class="section-title">
+                  <span class="icon-holder"
+                    ><i class="fa-solid fa-archive"></i></span
+                  >Projects
+                </h2>
+                <div class="item">
+                  <span class="project-title"
+                    ><a
+                      href="https://github.com/lingering126/Data-analysis-project-Global-YouTube-Statistics-2023.git"
+                      target="_blank"
+                      >Data analysis: Global YouTube Statistics 2023</a
+                    ></span
+                  >
+                  -
+                  <span class="project-tagline"
+                    >An analysis of a dataset on kaggle, named "Global YouTube
+                    Statistics 2023". Using R to analyze the data of the world's
+                    100 most successful Youtube channels, trying to dig up the
+                    insights of some trending developments of Youtube community,
+                    and visualized by Shinny app.</span
+                  >
+                </div>
+              </section>
+              <section class="skills-section section">
+                <h2 class="section-title">
+                  <span class="icon-holder"
+                    ><i class="fa-solid fa-rocket"></i></span
+                  >Skills
+                </h2>
+                <div class="skillset">
+                  <div class="item">
+                    <h3 class="level-title">MS Office</h3>
+                  </div>
+                  <div class="item">
+                    <h3 class="level-title">Python</h3>
+                  </div>
+                  <div class="item">
+                    <h3 class="level-title">SPSS</h3>
+                  </div>
+                  <div class="item">
+                    <h3 class="level-title">R</h3>
+                  </div>
+                  <div class="item">
+                    <h3 class="level-title">SQL</h3>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </article>
+          <article id="reference">
+            <h1>Reference</h1>
+            <ul>
+              <li>
+                [1]
+                <a
+                  href="https://en.wikipedia.org/wiki/Hyperlink#:~:text=In%20computing%2C%20a%20hyperlink%2C%20or,is%20known%20as%20anchor%20text."
+                  >Hyperlink. Wikipedia</a
+                >
+              </li>
+              <li>
+                [2]
+                <a
+                  href="https://www.freecodecamp.org/news/what-is-a-hyperlink-definition-for-html-link-beginners/"
+                  >What is a Hyperlink? Definition for HTML Link Beginners.
+                  freecodecamp</a
+                >
+              </li>
+              <li>
+                [3]
+                <a
+                  href="https://www.wired.com/story/apple-vision-pro-specs-price-release-date/"
+                  >Apple's Mixed-Reality Headset, Vision Pro, Is Here. wired
+                </a>
+              </li>
+              <li>
+                [4]
+                <a
+                  href="https://aws.amazon.com/blogs/mobile/what-happens-when-you-type-a-url-into-your-browser/"
+                  >What happens when you type a URL into your browser?. aws</a
+                >
+              </li>
+              <li>
+                [5]
+                <a
+                  href="https://www.coengoedegebure.com/tcp-3-way-handshake-port-scanning/"
+                  >TCP 3-way handshake and port scanning. Coen Goedegebure's
+                  Blog</a
+                >
+              </li>
+              <li>
+                [6]
+                <a href="https://www.jcchouinard.com/http-requests/"
+                  >What are HTTP Requests. jcchouinard</a
+                >
+              </li>
+              <li>
+                [7]
+                <a href="https://en.wikipedia.org/wiki/Ajax_(programming)"
+                  >Ajax (programming). Wikipedia</a
+                >
+              </li>
+              <li>
+                [8]
+                <a href="https://www.javatpoint.com/how-ajax-works"
+                  >How AJAX works?. javatpoint</a
+                >
+              </li>
+              <li>
+                [9]
+                <a href="https://web.dev/articles/howbrowserswork"
+                  >How browsers work. web.dev</a
+                >
+              </li>
+              <li>
+                [10]
+                <a
+                  href="https://dev.to/starkiedev/how-the-browser-renders-a-web-page-1ahc"
+                  >How the browser renders a web page. Dev Community</a
+                >
+              </li>
+              <li>
+                [11]
+                <a
+                  href="https://dev.to/starkiedev/how-the-browser-renders-a-web-page-1ahc"
+                  >How the browser renders a web page. Dev Community</a
+                >
+              </li>
+              <li>
+                [12]
+                <a href="http://www.ted-hunt.com/HYPERLINKS/index.html"
+                  >The history of the hyperlink. ted-hunt</a
+                >
+              </li>
+              <li>
+                [13]
+                <a
+                  href="https://link-building-services.co.uk/the-evolution-of-hyperlinks-a-journey-through-the-digital-age/"
+                  >The Evolution of Hyperlinks: A Journey through the Digital
+                  Age. link-building-services</a
+                >
+              </li>
+              <li>
+                [14]
+                <a href="https://en.wikipedia.org/wiki/History_of_hypertext"
+                  >History of hypertext. Wikipedia</a
+                >
+              </li>
+              <li>
+                [15]
+                <a
+                  href="https://home.cern/science/computing/birth-web/short-history-web"
+                  >A short history of the Web. CERN</a
+                >
+              </li>
+              <li>
+                [16]
+                <a
+                  href="https://www.foxnews.com/tech/ncsa-mosaic-the-first-real-web-browser-turns-20"
+                  >NCSA Mosaic, the first real web browser, turns 20. FOX
+                  NEWS</a
+                >
+              </li>
+              <li>
+                [17]
+                <a
+                  href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier"
+                  >Uniform Resource Identifier. Wikipedia</a
+                >
+              </li>
+              <li>
+                [18]
+                <a
+                  href="https://www.businessinsider.com/guides/tech/what-is-a-url"
+                  >What is a URL? Here's what you need to know about the
+                  internet tool that locates webpages. businessinsider</a
+                >
+              </li>
+              <li>
+                [19]
+                <a href="https://en.wikipedia.org/wiki/CSS#History"
+                  >CSS. Wikipedia</a
+                >
+              </li>
+              <li>
+                [20]
+                <a href="https://en.wikipedia.org/wiki/JavaScript#History"
+                  >JavaScript. Wikipedia</a
+                >
+              </li>
+              <li>
+                [21]
+                <a href="https://en.wikipedia.org/wiki/JavaScript#History"
+                  >What is JavaScript?. MDN Web Docs</a
+                >
+              </li>
+              <li>
+                [22]
+                <a
+                  href="https://www.mytaskpanel.com/static-and-dynamic-websites/"
+                  >Static and dynamic websites: benefits, drawbacks and
+                  examples. mytaskpanel</a
+                >
+              </li>
+              <li>
+                [23]
+                <a
+                  href="https://www.linkedin.com/pulse/multimedia-its-applications-muhammad-ikhmal/"
+                  >Multimedia and Its Applications. linkedin</a
+                >
+              </li>
+              <li>
+                [24]
+                <a href="https://www.w3schools.com/html/html_responsive.asp"
+                  >HTML Responsive Web Design. w3schools</a
+                >
+              </li>
+            </ul>
+            <p>
+              Note: The reference of code(the timeline and the biography parts)
+              are written in the comments.
+            </p>
+            <h1>Citation of AI Assistance</h1>
+            <p>In this project, I used AI to assist me in the below parts:</p>
+            <ol>
+              <li>
+                <p>
+                  ChatGPT 3.5: Helped me to write the quiz in the page
+                  "concept&mechanism". It helped me write the template, I change
+                  the button style from basic to "btn-primary" of bootstrap5. I
+                  input the options and the right answer. I changed the style to
+                  make it adaptive to the webpage.
+                </p>
+              </li>
+              <li>
+                <p>
+                  ChatGPT 3.5: Helped me to write the outline of the history of
+                  hyperlinks. I asked it to generate a brief outline of how
+                  hyperlinks evolved. Then I search some related information
+                  based on this outline to write the content of this timeline.
+                </p>
+              </li>
+              <li>
+                <p>
+                  ChatGPT 3.5: Helped me to debug the adding of index of images.
+                  I can't add the notation index near the image, so I asked
+                  ChatGPT. It suggested me to add a div of "image-container" to
+                  wrap the image.
+                </p>
+              </li>
+              <li>
+                <p>
+                  ChatGPT 3.5: Helped me to debug the AJAX example. Help me to
+                  figure out why i can't implement jquery: I should put my
+                  script.js file under jquery file!
+                </p>
+              </li>
+              <li>
+                <p>
+                  ChatGPT 3.5: Helped me to analyze the components of a
+                  hyperlink and explain each http request method, and make a
+                  table.
+                </p>
+              </li>
+              <li>
+                <p>
+                  ChatGPT 3.5: Helped me to refine the style of the webpage,
+                  like align settings, letter-spacing.
+                </p>
+              </li>
+              <li>
+                <p>
+                  ChatGPT 3.5: Helped me to modify some html code flaws based on
+                  the validating results.
+                </p>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer>
+    <h3 style="font-size: 24px; margin-bottom: 5px">Amazing Hyperlink</h3>
+    <p>Who connects the world!</p>
+  </footer>
+  </body>
+</html>
